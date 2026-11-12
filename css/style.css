@@ -36,9 +36,17 @@ body {
   text-indent: 5px;
 }
 
-.headercontanier .topelements .textlogo h4 { margin: 0; font-size: 18px;  }
-.headercontanier .topelements .textlogo h4:hover { margin: 0; font-size: 18px; color:antiquewhite; }
-.headercontanier .topelements .imagelogo { margin: 0; padding: 0; }
+.headercontanier .topelements .textlogo h4 { 
+  margin: 0; 
+  font-size: 18px;
+  }
+.headercontanier .topelements .textlogo h4:hover { margin: 0;
+   font-size: 18px; 
+   color:antiquewhite; 
+  }
+.headercontanier .topelements .imagelogo { margin: 0;
+   padding: 0; 
+  }
 
 .headercontanier .topelements .imagelogo img {
   width: 60px;
@@ -140,7 +148,7 @@ body {
 
 .b1section1 {
   color: #000;
-  background-color: burlywood;
+  background-color: rgb(220, 189, 148);
   border: none;
   text-align:center;
   border-radius: 50px;
@@ -153,7 +161,8 @@ body {
   padding-top: 10px; 
 }
 
-.b1section1:hover { background-color: rgb(152, 160, 95); }
+.b1section1:hover { background-color: rgb(152, 160, 95); 
+}
 
 
 .packagecontainer {
