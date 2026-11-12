@@ -19,25 +19,21 @@
      </div>
      </div>
 
-          <nav class="menubarcontainer">
-  <!-- Hidden checkbox controls the menu -->
-  <input type="checkbox" id="navToggle" class="nav-toggle" />
+          <nav class="menubarcontainer" aria-label="Primary navigation">
+  <button type="button" class="togglebutton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-  <!-- Label = hamburger icon (clickable on phone) -->
-  <label for="navToggle" class="togglebutton" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-  <div class="submenu">
+  <div class="submenu" id="primary-menu">
     <ul>
       <li><a href="#home">HOME</a></li>
       <li><a href="#news">LATEST NEWS</a></li>
       <li><a href="#adventures">ADVENTURES</a></li>
       <li><a href="#packages">PACKAGES</a></li>
       <li><a href="#contact">CONTACT</a></li>
-      <li><a href="#tour">TOUR</a></li>
+      <li><a href="#adventures">TOUR</a></li>
     </ul>
   </div>
 </nav>
@@ -45,14 +41,14 @@
     </header>
 
 <main>
-  <section class="section1">
+  <section class="section1" id="home">
      <h1 class="neverheading">Never Stop </h1>
      <h2 class="exp">Exploring</h2>
     <p class="p1section1">Visit Ethiopia Offers Best Deals On Ethopia Tour Packages.</p>
-    <buttton  type="get started" class="b1section1">Get Started</buttton>
+    <a class="b1section1" href="#packages">Get Started</a>
   </section>
 
-  <section class="packagecontainer">
+  <section class="packagecontainer" id="adventures">
     <div class="packagetitlecontainer">
       <a href="">Adventure Tour</a>
     </div>
@@ -105,11 +101,6 @@
         <a href="">Readmore</a>
       </div>
        </div>
-
-
-
-
-
 
 <div class="packageboxcontainer">
       <div class="packageimagecontainer">
@@ -170,8 +161,8 @@
   
   </section>
 
-  <section class="packagecontainer2">
-    <div class="packagetitlecontainer2">
+  <section class="packagecontainer2" id="packages">
+    <div class="packagetitlecontainer2" id="news">
       <a href="">Popular Packages</a>
     </div>
     <div class="packageboxcontainer2">
@@ -286,7 +277,7 @@
        </div>
   
   </section>
- <section class="registration">
+ <section class="registration" id="contact">
 <div class="registrationcontactus">
   <a href="#contact">Contact Us</a>
 </div>
@@ -363,6 +354,29 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script>
+  const menuToggle = document.querySelector(".togglebutton");
+  const primaryMenu = document.querySelector("#primary-menu");
+
+  function closeMenu() {
+    menuToggle.setAttribute("aria-expanded", "false");
+    document.querySelector(".menubarcontainer").classList.remove("menu-open");
+  }
+
+  menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    document.querySelector(".menubarcontainer").classList.toggle("menu-open", !isExpanded);
+  });
+
+  primaryMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+</script>
 
 </body>
 </html>
