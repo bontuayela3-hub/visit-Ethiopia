@@ -20,37 +20,41 @@
      </div>
 
           <nav class="menubarcontainer">
-            <div class="togglebutton">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="submenu">
-              <ul>
-       <li> <a href="#">HOME</a></li>
-         <li><a href="news">LATEST NEWS</a></li>
-        <li><a href="news">LATEST NEWS</a></li>
-        <li><a href="adventures">ADVENTURES</a></li>
-        <li><a href="packages">PACKAGES</a></li>
-        <li><a href="contact">CONTACT</a></li>
-        <li><a href="tour">TOUR</a> </li>
-        </ul>
-        </div>
-     </nav>
+  <!-- Hidden checkbox controls the menu -->
+  <input type="checkbox" id="navToggle" class="nav-toggle" />
+
+  <!-- Label = hamburger icon (clickable on phone) -->
+  <label for="navToggle" class="togglebutton" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="submenu">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#news">LATEST NEWS</a></li>
+      <li><a href="#adventures">ADVENTURES</a></li>
+      <li><a href="#packages">PACKAGES</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><a href="#tour">TOUR</a></li>
+    </ul>
+  </div>
+</nav>
     </div>
     </header>
 
 <main>
-  <section class="section1">
+  <section class="section1" id="home">
      <h1 class="neverheading">Never Stop </h1>
      <h2 class="exp">Exploring</h2>
     <p class="p1section1">Visit Ethiopia Offers Best Deals On Ethopia Tour Packages.</p>
     <buttton  type="get started" class="b1section1">Get Started</buttton>
   </section>
 
-  <section class="packagecontainer">
-    <div class="packagetitlecontainer">
-      <a href="">Adventure Tour</a>
+  <section class="packagecontainer" id="adventures">
+    <div class="packagetitlecontainer" id="news">
+      <a href="" id="tour">Adventure Tour</a>
     </div>
     <div class="packageboxcontainer">
       <div class="packageimagecontainer">
@@ -166,7 +170,7 @@
   
   </section>
 
-  <section class="packagecontainer2">
+  <section class="packagecontainer2" id="packages">
     <div class="packagetitlecontainer2">
       <a href="">Popular Packages</a>
     </div>
@@ -282,9 +286,9 @@
        </div>
   
   </section>
- <section class="registration">
+ <section class="registration" id="contact">
 <div class="registrationcontactus">
-  <a href="#" >Contact Us</a>
+  <a href="#contact">Contact Us</a>
 </div>
    <form>
     

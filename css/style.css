@@ -1,266 +1,248 @@
-body{
+
+html { scroll-behavior: smooth; }
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  background-color:black;
-  margin: 0px;
- }
- 
- .headercontanier{
-   display: grid;
-   grid-template-columns: 400px 1fr;
-   justify-content: flex-start;
-   gap:0px;
-   box-sizing: border-box;
-   background-size:cover;
- }
- .headercontanier .topelements{
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   background-color: black;
-   margin:0px;
-   
- 
+  font-size: 16px;
+  background-color: #000;
+  margin: 0;
+}
 
- }
- .headercontanier .topelements .textlogo{
-   font-family: Arial, Helvetica, sans-serif;
-   font-variant: normal;
-   color: white;
-   padding: 7px;
-   font-size: 15px;
-   text-indent: 5px;
+/* =========================================================
+   2. HEADER + NAV  (desktop)
+   ========================================================= */
+.headercontanier {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.headercontanier .topelements {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  margin: 0;
+}
+
+.headercontanier .topelements .textlogo {
+  color: #fff;
+  font-size: 18px;
   font-weight: bold;
-  
-  }
+  padding: 15px 10px;
+  text-indent: 5px;
+}
 
+.headercontanier .topelements .textlogo h4 { margin: 0; font-size: 18px;  }
+.headercontanier .topelements .textlogo h4:hover { margin: 0; font-size: 18px; color:antiquewhite; }
+.headercontanier .topelements .imagelogo { margin: 0; padding: 0; }
 
- 
- .headercontanier .topelements .imagelogo{
-  padding: 0;
-  margin: 25px 0 0 5px;
-  
- }
- .headercontanier .topelements .imagelogo img{
-   width: 60%;
-   height:30px;
-   margin-right: 30px;
- }
- .headercontanier .menubarcontainer{
-   display: inline-flex;
-   justify-content: flex-start;
-   background-color: black;
-   /* gap:17px; */
-  
- }
- .headercontanier .menubarcontainer ul{
+.headercontanier .topelements .imagelogo img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  display: block;
+}
+
+.menubarcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(5, 4, 4);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-toggle { display: none; }
+
+.togglebutton {
+  display: none;              /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.togglebutton span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menubarcontainer .submenu ul {
   display: flex;
   flex-direction: row;
-  padding: 20px;
- }
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
 
-.headercontanier .menubarcontainer ul a{
-   color: white;
-    font-size: 13px;
-   font-family: Arial, Helvetica, sans-serif;
-   font-variant: normal;
-   padding:20px; 
+.menubarcontainer .submenu ul a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
   text-decoration: none;
-  margin-top: 8px;
+  padding: 15px 12px;
+  display: block;
 }
-.headercontanier .navigationlinks a:hover{
-   color:bisque;
-   cursor:pointer ;
+.menubarcontainer .submenu ul a:hover {
+  color: bisque;
+  cursor: pointer;
 }
 
 
+/* =========================================================
+   3. HERO
+   ========================================================= */
 .section1 {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("../asset/images/bg.jpg");
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   width: 100%;
-  min-height: 500px;
-
+  min-height: 600px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-
-
-.neverheading{
- font-size: 60px;
- font-family: Arial, Helvetica, sans-serif;
- color:aliceblue;
- text-align:left;
- margin:10px;
- padding:5px;
-font-weight: bold;
-font-variant: normal;
-
-margin: 900px 5 20 40px;
+.neverheading {
+  font-size: 60px;
+  color: aliceblue;
+  font-weight: bold;
+  margin: 0 0 0 40px;
 }
-.exp{
-font-size: 60px;
- font-family: Arial, Helvetica, sans-serif;
- color:burlywood;
- text-align:left;
- margin:10px;
- padding:5px;
-font-weight: bold;
-font-variant: normal;
-margin:30 5 20 50px;
+
+.exp {
+  font-size: 60px;
+  color: burlywood;
+  font-weight: bold;
+  margin: 0 0 20px 50px;
 }
-.p1section1{
-  font-family: Arial, Helvetica, sans-serif;
+
+.p1section1 {
   font-size: 18px;
   color: azure;
   font-weight: 600;
-  margin: 5 5 5 20px;
-  padding: 20px;
-  font-variant: normal;
-  text-indent: 3px;
-
-}
-.b1section1{
- color:balck;
- background-color:burlywood;
- border-radius: 20px;
- font-family: Arial, Helvetica, sans-serif;
- width: 10%;
- height:40px ;
- text-align: center;
- padding: 10px;
- margin-left: 600px;
- font-weight: 700;
-font-size:15px ;
-}
-.b1section1:hover{
-background-color:rgb(152, 160, 95);
-cursor: pointer;
-
+  margin: 5px 0 20px 40px;
+  padding: 0;
 }
 
+.b1section1 {
+  color: #000;
+  background-color: burlywood;
+  border: none;
+  text-align:center;
+  border-radius: 50px;
+  width: 160px;
+  height: 45px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer; 
+  margin-left:600px;
+  padding-top: 10px; 
+}
 
+.b1section1:hover { background-color: rgb(152, 160, 95); }
 
-
-
-.packagecontainer{
+/* =========================================================
+   4. CARD GRID 1 (news / adventures / tour)
+      DESKTOP = 3 PER ROW  ← declared first
+   ========================================================= */
+.packagecontainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap:2rem;
+  gap: 2rem;
   padding: 2rem;
   align-items: stretch;
-  
+  scroll-margin-top: 80px;
 }
 
 .packagecontainer .packagetitlecontainer {
-  grid-column: 1/4;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  grid-column: 1 / 4;
   text-align: center;
+  font-weight: 700;
+}
+
+.packagetitlecontainer a {
   color: azure;
   font-weight: 700;
   text-decoration: none;
-  transition: box-shadow 0.3s ease;
-}
-.packagetitlecontainer a{
-   text-align: center;
-  color: azure;
-  font-weight: 700;
-  text-decoration: none;
-
+  font-size: 1.4rem;
 }
 
+.packagetitlecontainer a:hover { color: blanchedalmond; }
 
-.packagetitlecontainer a:hover{
-  color: blanchedalmond;
-  
-}
 .packagecontainer .packageboxcontainer {
-    display: flex;
-    flex-direction: column;
-    background-color: #28343D;
-    border: 2px solid transparent;
-    border-radius: 2rem;
-     height: 100%;
-    border-bottom-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-   border-top-left-radius: 2rem;
-   border-bottom-right-radius: 2rem ;
-   box-sizing: border-box;
-   transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  background-color: #28343D;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .packagecontainer .packageboxcontainer:hover {
-    border-color: #F2B24D;
-    box-shadow: 0 0 15px rgba(242, 178, 77, 0.35);
+  border-color: #F2B24D;
+  box-shadow: 0 0 15px rgba(242, 178, 77, 0.35);
 }
 
- .packagecontainer .packageboxcontainer .packageimagecontainer{
- /*padding: 3px;
- margin: 20px;
-margin-right: 50px;
- margin-top: 0px;*/ 
-    width: 200px;
-    height: 200px;
-    padding: 0;
-    margin: 20px auto;
-    box-sizing: border-box;
-  
-
-
- 
- }
-
- .packagecontainer .packageboxcontainer .packageimagecontainer img{
-   /*width: 100%;
-   height:100%;
-   margin: 30px;
-   border-radius: 50%;*/
-   width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border-radius: 50%;
-    margin: 0;
-    box-sizing: border-box;
+.packagecontainer .packageboxcontainer .packageimagecontainer {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  padding: 0;
+  box-sizing: border-box;
 }
-.packagecontainer .packageboxcontainer .packageheadingcontainer{
-color: burlywood;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 700;
-font-size: 10px;
-padding: 0 10px;
-margin: 0;
-text-align: center;
-font-variant: normal;
 
-
+.packagecontainer .packageboxcontainer .packageimagecontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 50%;
 }
-.packagecontainer .packageboxcontainer .packageparagraphcontainer{
-  color:whitesmoke;
-  text-decolartion:none;
+
+.packagecontainer .packageboxcontainer .packageheadingcontainer {
+  color: burlywood;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.packagecontainer .packageboxcontainer .packageheadingcontainer h1 {
+  font-size: 1.1rem;
+}
+
+.packagecontainer .packageboxcontainer .packageparagraphcontainer {
+  color: whitesmoke;
   text-align: justify;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:13px;
+  font-size: 13px;
   line-height: 25px;
   padding: 0 10px;
- margin: 0 0 20px 0;
-  word-spacing: normal;
-  letter-spacing: normal;
+  margin: 0 0 20px 0;
   flex-grow: 1;
-
-
 }
+
 .packagecontainer .packageboxcontainer .packagereadercontainer {
   border: 2px solid black;
   background-color: #4B4A43;
@@ -271,14 +253,12 @@ font-variant: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-shrink: 0;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .packagecontainer .packageboxcontainer .packagereadercontainer a {
   color: #F2B24D;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-decoration: none;
   font-size: 14px;
@@ -290,161 +270,92 @@ font-variant: normal;
 }
 
 .packagecontainer .packageboxcontainer .packagereadercontainer:hover {
-  cursor: pointer;
   background-color: darkgoldenrod;
-  border-color: #000;
-}
-.togglebutton{
- display: none;
-}
-.togglebutton span{
-  display:block;
-  background-color: #000;
-  margin: 0.2rem;
-  border:1px solid black;
-  width: 2rem;
-}
-@media(max-width:730px){
-  .headercontanier{
-    grid-template-columns: 1fr;
-    position: relative;
-  }
-  .headercontanier .navigationlinks{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 1;
-  }
-  .togglebutton{
-    display: block;
-    cursor: pointer;
-  }
-  .headercontanier .navigationlinks a{
-    display: none;
-  }
-  .headercontanier .navigationlinks:hover a{
-    display: block;
-  }
 }
 
-.packagecontainer2{
+/* =========================================================
+   5. CARD GRID 2 (popular packages)
+      DESKTOP = 3 PER ROW  ← declared first
+   ========================================================= */
+.packagecontainer2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap:2rem;
+  gap: 2rem;
   padding: 2rem;
   align-items: stretch;
-  
+  scroll-margin-top: 80px;
 }
 
 .packagecontainer2 .packagetitlecontainer2 {
-  grid-column: 1/4;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  grid-column: 1 / 4;
   text-align: center;
+  font-weight: 700;
+}
+
+.packagetitlecontainer2 a {
   color: azure;
   font-weight: 700;
   text-decoration: none;
-  transition: box-shadow 0.3s ease;
-}
-.packagetitlecontainer2 a{
-   text-align: center;
-  color: azure;
-  font-weight: 700;
-  text-decoration: none;
-
+  font-size: 1.4rem;
 }
 
+.packagetitlecontainer2 a:hover { color: blanchedalmond; }
 
-.packagetitlecontainer2 a:hover{
-  color: blanchedalmond;
-  
-}
 .packagecontainer2 .packageboxcontainer2 {
-    display: flex;
-    flex-direction: column;
-    background-color: #28343D;
-    border: 2px solid transparent;
-    border-radius: 2rem;
-     height: 100%;
-    border-bottom-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-   border-top-left-radius: 2rem;
-   border-bottom-right-radius: 2rem ;
-   box-sizing: border-box;
-   transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  background-color: #28343D;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .packagecontainer2 .packageboxcontainer2:hover {
-    border-color: #F2B24D;
-    box-shadow: 0 0 15px rgba(242, 178, 77, 0.35);
+  border-color: #F2B24D;
+  box-shadow: 0 0 15px rgba(242, 178, 77, 0.35);
 }
 
- .packagecontainer2 .packageboxcontainer2 .packageimagecontainer2{
- /*padding: 3px;
- margin: 20px;
-margin-right: 50px;
- margin-top: 0px;*/ 
-    width: 90%;
-    height: 200px;
-    margin: 20px auto;       
-    box-sizing: border-box;
-    padding: 0;
-
-
-
- 
- }
-
-
- .packagecontainer2 .packageboxcontainer2 .packageimagecontainer2 img{
-   /*width: 100%;
-   height:100%;
-   margin: 30px;
-   border-radius: 50%;*/
-   width: 100%;
-    height: 100%;
-    /*object-fit: cover;*/
-   /* object-position: center;*/
-    /*display: block;*/
-    display: block;
-    object-position: center;
-    object-fit: cover;
-    margin: 0;
-
-    box-sizing: border-box;
-    border-radius:10px;
-       
+.packagecontainer2 .packageboxcontainer2 .packageimagecontainer2 {
+  width: 90%;
+  height: 200px;
+  margin: 20px auto;
+  padding: 0;
+  box-sizing: border-box;
 }
-.packagecontainer2 .packageboxcontainer2 .packageheadingcontainer2{
-color: burlywood;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 700;
-font-size: 10px;
-padding: 0 10px;
-margin: 0;
-text-align: center;
-font-variant: normal;
 
-
+.packagecontainer2 .packageboxcontainer2 .packageimagecontainer2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 10px;
 }
-.packagecontainer2 .packageboxcontainer2 .packageparagraphcontainer2{
-  color:whitesmoke;
-  text-decolartion:none;
+
+.packagecontainer2 .packageboxcontainer2 .packageheadingcontainer2 {
+  color: burlywood;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.packagecontainer2 .packageboxcontainer2 .packageheadingcontainer2 h1 {
+  font-size: 1.1rem;
+}
+
+.packagecontainer2 .packageboxcontainer2 .packageparagraphcontainer2 {
+  color: whitesmoke;
   text-align: justify;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:13px;
+  font-size: 13px;
   line-height: 25px;
   padding: 0 10px;
- margin: 0 0 20px 0;
-  word-spacing: normal;
-  letter-spacing: normal;
+  margin: 0 0 20px 0;
   flex-grow: 1;
-
-
 }
+
 .packagecontainer2 .packageboxcontainer2 .packagerbooknowcontainer2 {
   border: 2px solid black;
   background-color: #4B4A43;
@@ -455,14 +366,12 @@ font-variant: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-shrink: 0;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .packagecontainer2 .packageboxcontainer2 .packagerbooknowcontainer2 a {
   color: #F2B24D;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-decoration: none;
   font-size: 14px;
@@ -474,18 +383,21 @@ font-variant: normal;
 }
 
 .packagecontainer2 .packageboxcontainer2 .packagerbooknowcontainer2:hover {
-  cursor: pointer;
   background-color: darkgoldenrod;
-  border-color: #000;
 }
+
+/* =========================================================
+   6. CONTACT FORM
+   ========================================================= */
 .registration {
   width: 60%;
   max-width: 700px;
-  margin: 0 auto 3px;
+  margin: 20px auto;
   padding: 30px;
-  background-color: #28343D; 
+  background-color: #28343D;
   border-radius: 2rem;
   box-sizing: border-box;
+  scroll-margin-top: 80px;
 }
 
 .registration .registrationcontactus {
@@ -497,13 +409,10 @@ font-variant: normal;
 .registration .registrationcontactus a {
   text-decoration: none;
   color: azure;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
-.registration .registrationcontactus a:hover {
-  color: blanchedalmond;
-}
+.registration .registrationcontactus a:hover { color: blanchedalmond; }
 
 .registration .registrationform {
   display: grid;
@@ -516,24 +425,17 @@ font-variant: normal;
   width: 100%;
   padding: 15px 20px;
   background-color: #222b34;
-  color:azure;
+  color: azure;
   border: 2px solid #39434d;
   border-radius: 12px;
   font-size: 15px;
   box-sizing: border-box;
-  margin: 0;
-  font-weight: 500;
 }
-.registration .registrationform input:hover{
-   border-color: #F2B24D;
-}
-.registration .registrationform input::placeholder{
-  color: azure;
-  font-weight:400;
-}
-.registration .registrationtextarea {
-  margin-bottom: 15px;
-}
+
+.registration .registrationform input:hover { border-color: #F2B24D; }
+.registration .registrationform input::placeholder { color: azure; }
+
+.registration .registrationtextarea { margin-bottom: 15px; }
 
 .registration .registrationtextarea textarea {
   width: 100%;
@@ -546,138 +448,191 @@ font-variant: normal;
   box-sizing: border-box;
   resize: vertical;
   font-family: Arial, Helvetica, sans-serif;
-  
-}
-.registration .registrationtextarea textarea:hover{
-   border-color: #F2B24D;
-}
-.registration .registrationtextarea textarea::placeholder{
-    font-family: Arial, Helvetica, sans-serif;
-    color: azure;
-    font-weight: 500;
 }
 
+.registration .registrationtextarea textarea:hover { border-color: #F2B24D; }
+.registration .registrationtextarea textarea::placeholder { color: azure; }
+
 .registrtionbutton {
-  /*display: block;*/
+  display: block;
   width: 40%;
-  height: 40%;
-  padding: 20px;
+  padding: 15px;
   background-color: #F2B24D;
   color: #000;
   border: none;
   border-radius: 25px;
-  margin: 25px auto 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 25px 0 0 0;
   font-weight: 700;
   font-size: 16px;
-  margin-left: 10px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.registrtionbutton:hover {
-  background-color: darkgoldenrod;
-  cursor: pointer;
-}
-footer{
-  background-color:black;
-  
-}
-.footergrid{
+.registrtionbutton:hover { background-color: darkgoldenrod; }
+
+/* =========================================================
+   7. FOOTER
+   ========================================================= */
+footer { background-color: black; }
+
+.footergrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 8px;
 }
-.footergrid .field{
- display: flex;
- flex-direction: column;
- gap:10px; 
- padding: 10px;
- margin:50px;
+
+.footergrid .field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin: 50px;
 }
 
-
-.footergrid .field h3{
+.footergrid .field h3 {
   color: #F2B24D;
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: underline;
 }
 
-.footergrid .field a{
+.footergrid .field a {
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: white;
-  text-align: justify;
   font-weight: 100;
 }
-.footergrid .field a:hover{
- font-weight: 600;
- color: azure;
- font-family: Arial, Helvetica, sans-serif;
-}
-.lastfooterinfo{
-  background-color:black;
-  width: 100;
-  height: fit-content;
-  margin: 10 10 auto 10;
-}
-.footerend{
+
+.footergrid .field a:hover { font-weight: 600; color: azure; }
+
+.lastfooterinfo { background-color: black; }
+
+.footerend {
   color: azure;
   font-size: 17px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   padding: 10px;
-   margin: 10 5 90 5px;
 }
-.copyright{
-  color: azure;
-   font-size: 17px;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  padding: 4px;
-  margin: 5 5 90 5px;
-}
-.togglebutton{
-  display: none;
-}
-.togglebutton span{
-  width: 2rem;
-  display: block;
-  border: 1px solid gray;
-}
-@media(max-width:730px){
-.togglebutton{
-  display: block;
-  position: absolute;
-  top: 1.5rem;
-  right: 0rem;
 
+.copyright {
+  color: azure;
+  font-size: 17px;
+  text-align: center;
+  padding: 4px;
 }
-.submenu{
-  display: none;
-}
-.menubarcontainer:hover .submenu{
-  display: block;
-   position: absolute;
-  top: 2rem;
-  right: 1rem;
-}
-.menubarcontainer:hover ul{
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  gap: 13px;
-}
-.menubarcontainer:hover ul {
-  border:3px solid black;
- background-color:grey;
-  
-}
-.menubarcontainer:hover ul a:hover{
-color: #F2B24D;
-cursor: pointer;
-}
+
+/* =========================================================
+   8. MOBILE  —  MUST BE LAST IN THE FILE
+      Phone = 2 cards per row (overrides the 3-per-row above)
+   ========================================================= */
+@media (max-width: 730px) {
+
+  /* Hamburger visible */
+  .togglebutton {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 20;
+  }
+
+  /* Menu hidden until checkbox is checked */
+  .menubarcontainer .submenu {
+    display: none;
+    width: 100%;
+    background: #111;
+    border-radius: 0 0 10px 10px;
+    margin-top: 50px;
+  }
+
+  .nav-toggle:checked ~ .submenu { display: block; }
+
+  .nav-toggle:checked ~ .togglebutton span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle:checked ~ .togglebutton span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked ~ .togglebutton span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menubarcontainer .submenu ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .menubarcontainer .submenu ul a {
+    padding: 14px 20px;
+    border-bottom: 1px solid #222;
+  }
+
+  /* ===== PHONE: 2 CARDS PER ROW ===== */
+  .packagecontainer,
+  .packagecontainer2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  /* Section title spans both columns */
+  .packagecontainer .packagetitlecontainer,
+  .packagecontainer2 .packagetitlecontainer2 {
+    grid-column: 1 / -1;
+  }
+
+  /* Round image smaller */
+  .packagecontainer .packageboxcontainer .packageimagecontainer {
+    width: 110px;
+    height: 110px;
+    margin: 15px auto;
+  }
+
+  /* Rectangle image smaller */
+  .packagecontainer2 .packageboxcontainer2 .packageimagecontainer2 {
+    width: 95%;
+    height: 110px;
+    margin: 12px auto;
+  }
+
+  /* Smaller headings */
+  .packagecontainer .packageboxcontainer .packageheadingcontainer h1,
+  .packagecontainer2 .packageboxcontainer2 .packageheadingcontainer2 h1 {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  /* Smaller paragraph text */
+  .packagecontainer .packageboxcontainer .packageparagraphcontainer,
+  .packagecontainer2 .packageboxcontainer2 .packageparagraphcontainer2 {
+    font-size: 11px;
+    line-height: 16px;
+    padding: 0 8px;
+    margin-bottom: 10px;
+  }
+
+  /* Smaller buttons */
+  .packagecontainer .packageboxcontainer .packagereadercontainer,
+  .packagecontainer2 .packageboxcontainer2 .packagerbooknowcontainer2 {
+    width: 100px;
+    height: 36px;
+    margin: 10px auto;
+  }
+
+  .packagecontainer .packageboxcontainer .packagereadercontainer a,
+  .packagecontainer2 .packageboxcontainer2 .packagerbooknowcontainer2 a {
+    font-size: 12px;
+  }
+
+  /* Hero text smaller */
+  .neverheading, .exp { font-size: 40px; margin-left: 20px; }
+  .p1section1 { font-size: 16px; margin-left: 20px; }
+  .b1section1 { margin-left: 20px; }
+
+  /* Contact form narrower */
+  .registration { width: 92%; padding: 20px; }
+  .registration .registrationform { grid-template-columns: 1fr; }
+
+  /* Footer 1 column */
+  .footergrid { grid-template-columns: 1fr; }
+  .footergrid .field { margin: 20px; }
 }
